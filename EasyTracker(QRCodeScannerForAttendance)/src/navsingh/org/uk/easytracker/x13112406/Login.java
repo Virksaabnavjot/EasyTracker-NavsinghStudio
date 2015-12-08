@@ -74,26 +74,7 @@ public class Login extends Activity  implements OnClickListener{
       }
   });
 		
-		/*
-		try
-	    {
-	      // Step 1: "Load" the JDBC driver
-	      Class.forName("com.imaginary.sql.msql.MsqlDriver"); 
-
-	      // Step 2: Establish the connection to the database 
-	      String url = "jdbc:msql://mysql2.gear.host/adminteamsnoop"; 
-	      Connection conn = (Connection) DriverManager.getConnection(url,"adminteamsnoop","Zc1d-T9_N9YA");  
-	      String sql = "INSERT INTO LOGIN (Admin_ID,username, password) values (0005,'nav','yoyo')";
-	      Statement statement = (Statement) conn.createStatement();   
-	      statement.executeUpdate(sql);
-	    }
-	    catch (Exception e)
-	    {
-	      System.err.println("D'oh! Got an exception!"); 
-	      System.err.println(e.getMessage()); 
-	    } 
-	    
-	    */
+		
 }
 	
 	 void loginlala(){
