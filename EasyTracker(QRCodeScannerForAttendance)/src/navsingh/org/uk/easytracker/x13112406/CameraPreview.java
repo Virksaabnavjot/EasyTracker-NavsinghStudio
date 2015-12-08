@@ -162,45 +162,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
 	        	    mContext.startActivity(intent);
 	        	    ((Activity) mContext).finish();
 					
-					/*
-					AlertDialog.Builder builder = new AlertDialog.Builder(mContext);
-					builder.setTitle("Result");
-					builder.setMessage(result.getText())
-					       .setCancelable(false)
-					       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
-					           public void onClick(DialogInterface dialog, int id) {
-					                //do things
-					           }
-					       });
-					AlertDialog alert = builder.create();
-					alert.show();
 					
-						*/
-						
-						
-					
-					/*
-					java.sql.Connection con = null;
-					 PreparedStatement pst = null;
-					 ResultSet rs = null;
-					String url = "jdbc:mysql://mysql2.gear.host/adminteamsnoop";
-					String user = "adminteamsnoop";
-					String password = "Zc1d-T9_N9YA";
-
-					try {
-					     con = DriverManager.getConnection(url, user, password);
-					     Statement statement = (Statement) con.createStatement(); 
-                         String sql = "INSERT INTO LOGIN (Admin_ID,username, password) values (0005,'nav','yoyo')";
-					     statement.executeUpdate(sql);
-
-					     con.close();
-					}
-
-					catch (SQLException ex) {
-					     
-
-					 } 
-					 */
 				}
 			} catch (NotFoundException e) {
 				// TODO Auto-generated catch block
