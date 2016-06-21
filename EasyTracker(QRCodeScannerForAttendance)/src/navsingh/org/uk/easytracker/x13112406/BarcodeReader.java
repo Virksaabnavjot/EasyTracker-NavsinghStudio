@@ -8,40 +8,24 @@ public class BarcodeReader extends Activity {
     private CameraPreview mPreview;
     private CameraManager mCameraManager;
     private HoverView mHoverView;
-    private static String jerry;
+    private static String studentID;
     MyPreference pref;
      
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main);
-		
 		Display display = getWindowManager().getDefaultDisplay();
 		mHoverView = (HoverView)findViewById(R.id.hover_view);
 		mHoverView.update(display.getWidth(), display.getHeight());
-		
 		mCameraManager = new CameraManager(this);
         mPreview = new CameraPreview(this, mCameraManager.getCamera());
         mPreview.setArea(mHoverView.getHoverLeft(), mHoverView.getHoverTop(), mHoverView.getHoverAreaWidth(), display.getWidth());
         FrameLayout preview = (FrameLayout) findViewById(R.id.camera_preview);
         preview.addView(mPreview);
         pref = new MyPreference(this);
-        
-        //getActionBar().hide();
-       jerry = pref.getQRCODE();
-      /*
-        if (jerry != null) {
-        	
-    		Intent intent = new Intent(this, Congratulations.class);
-    	    
-    	    startActivity(intent);
-        }
-        
-        */
-        
-	}
-	
-	
+        studentID = pref.getQRCODE();
+   }
 	
 	@Override
     protected void onPause() {
@@ -52,12 +36,9 @@ public class BarcodeReader extends Activity {
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 		mCameraManager.onResume();
 		mPreview.setCamera(mCameraManager.getCamera());
 		
-	}
-	
-	
+	}	
 }
