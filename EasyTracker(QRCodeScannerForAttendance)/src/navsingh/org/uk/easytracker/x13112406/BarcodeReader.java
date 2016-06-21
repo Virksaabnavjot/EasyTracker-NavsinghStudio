@@ -1,26 +1,13 @@
 package navsingh.org.uk.easytracker.x13112406;
-
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.LuminanceSource;
-import com.google.zxing.NotFoundException;
-import com.google.zxing.PlanarYUVLuminanceSource;
-import com.google.zxing.Result;
-import com.google.zxing.common.HybridBinarizer;
-
 import android.app.Activity;
-import android.content.Intent;
-import android.hardware.Camera;
-import android.hardware.Camera.PreviewCallback;
 import android.os.Bundle;
 import android.view.Display;
 import android.widget.FrameLayout;
-import android.widget.Toast;
 
 public class BarcodeReader extends Activity {
     private CameraPreview mPreview;
     private CameraManager mCameraManager;
     private HoverView mHoverView;
-    //the variable mary gets the value from camera preview class
     private static String jerry;
     MyPreference pref;
      
