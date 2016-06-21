@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -14,39 +13,25 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONObject;
-
-
-
-import android.os.Build;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.annotation.SuppressLint;
-import android.annotation.TargetApi;
 import android.app.Activity;
-import android.content.SharedPreferences;
 import android.util.Log;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class Congratulations extends Activity {
-	/**
-	 * @author Navjot
-	 */
 	MyPreference pref;
 	MySecondPreference spref;
-	private String mary;
-	
-	String kamal;
 	private TextView textytext;
 	String room;
 	String studentid;
-	InputStream is=null;
-	String result=null;
-	String line=null;
+	InputStream is = null;
+	String result = null;
+	String line = null;
 	int code;
 	
 	@SuppressLint("NewApi")
@@ -60,23 +45,15 @@ public class Congratulations extends Activity {
         pref = new MyPreference(this);
         spref = new MySecondPreference(this);
         Button insert=(Button) findViewById(R.id.congratsbutton);
-        
         textytext.setText("Sucessfully, logged in as:\n"+pref.getQRCODE());
 		studentid = pref.getQRCODE().toString();
 		room = spref.getSID().toString();
-		
 		insert();
         
         insert.setOnClickListener(new View.OnClickListener() {
 			
 		@Override
 		public void onClick(View v) {
-			// TODO Auto-generated method stub
-				
-			//studentid = e_id.getText().toString();
-			//name = e_name.getText().toString();
-			//String monkey = pref.getQRCODE();
-			
 			finish();
 		}
 	});
@@ -93,7 +70,7 @@ public class Congratulations extends Activity {
     	{
 		HttpClient httpclient = new DefaultHttpClient();
 	        HttpPost httppost = new HttpPost("http://snooptrack.gear.host/loginapi/insert.php");
-		//HttpPost httppost = new HttpPost("http://navsingh.org.uk/loginapi/insert.php");
+		    //HttpPost httppost = new HttpPost("http://navsingh.org.uk/loginapi/insert.php");
 	        httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 	        HttpResponse response = httpclient.execute(httppost); 
 	        HttpEntity entity = response.getEntity();
@@ -141,12 +118,8 @@ public class Congratulations extends Activity {
 			Toast.LENGTH_LONG).show();
             }
 	}
-	catch(Exception e)
-	{
+	catch(Exception e){
             Log.e("Fail 3", e.toString());
-	}
+	   }
     }
-    
-  
-       
 }
