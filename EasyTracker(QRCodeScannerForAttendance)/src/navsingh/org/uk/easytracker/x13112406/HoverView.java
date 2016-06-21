@@ -13,7 +13,7 @@ public class HoverView extends View {
 	
 	public HoverView(Context context, AttributeSet attrs) {
 		super(context, attrs);
-		// TODO Auto-generated constructor stub
+		
 		mPaint = new Paint();
 		mPaint.setColor(Color.GREEN);
 		mPaint.setStyle(Paint.Style.STROKE);
@@ -43,9 +43,7 @@ public class HoverView extends View {
 
 	@Override
 	protected void onDraw(Canvas canvas) {
-		// TODO Auto-generated method stub
 		super.onDraw(canvas);
-
 		canvas.drawRect(mLeft, mTop, mRight, mBottom, mPaint);
 	}
 }

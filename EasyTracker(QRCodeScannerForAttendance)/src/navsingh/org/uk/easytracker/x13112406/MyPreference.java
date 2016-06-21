@@ -9,7 +9,6 @@ import android.content.SharedPreferences.Editor;
 public class MyPreference {
 	public static String PREF_NAME = "MyPref";
 	public static String QR_CODE_TAG = "qrcod";
-	
 	SharedPreferences pref;
 	Context context;
 	Editor editor;
@@ -19,13 +18,13 @@ public class MyPreference {
 		pref = _context.getSharedPreferences(PREF_NAME, 1);
 	}
 	
-	 public void setQRCODE(String value){
+	public void setQRCODE(String value){
         editor = pref.edit();
         editor.putString(QR_CODE_TAG, value);
         editor.apply();
     }
 	 
-	 public String getQRCODE(){
+	public String getQRCODE(){
         return pref.getString(QR_CODE_TAG, "Null");
     }
 }

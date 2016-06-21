@@ -9,7 +9,6 @@ import android.content.SharedPreferences.Editor;
 public class MySecondPreference {
 	public static String SPREF_NAME = "MySPref";
 	public static String SID_TAG = "sid";
-	
 	SharedPreferences spref;
 	Context secondcontext;
 	Editor editor2;
