@@ -1,3 +1,4 @@
+UPDATE: The app is currently offine on Google Play, as it hasnt been updated in a while.
 Available on Google play: https://play.google.com/store/apps/details?id=navsingh.org.uk.easytracker.x13112406&hl=en
 
 An Attendance System powered with QR code scanning system for replacing standard attendance systems in Colleges, Institutes and Companies. The student can use Smartphone app to log his attendance easily without worrying about the fob/student card. All this data is stored at central database, so that college authorities/manager can login into the admin panel and can access all the data with graphs and stats.
