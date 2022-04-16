@@ -14,3 +14,5 @@ Technologies Used: -
 	PHP Web Service, Admin Panel (HTML, JavaScript, CSS and PHP)
 	Agile methodology (SCRUM software development framework)
 
+
+Copyrights - Navjot Singh Virk (https://navjot.mrvirk.com & https://mrvirk.com)
